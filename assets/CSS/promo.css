@@ -1,0 +1,88 @@
+#logo{
+    width: 100px;
+    height: auto;
+}
+#list{
+    display: flex;
+    align-items: center;
+    margin: auto;
+}
+/* Style global */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f8f9fa;
+    color: #343a40;
+}
+
+/* En-tête et Navigation */
+header {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.navbar {
+    padding: 1rem;
+}
+
+.navbar-brand img {
+    max-height: 40px;
+}
+
+.nav-link {
+    color: #007bff !important;
+    font-weight: 500;
+}
+
+.nav-link:hover {
+    color: #0056b3 !important;
+}
+
+/* Formulaire de recherche */
+.form-control {
+    border-radius: 25px;
+}
+
+.btn-outline-success {
+    border-radius: 25px;
+    border-color: #28a745;
+    color: #28a745;
+}
+
+.btn-outline-success:hover {
+    background-color: #28a745;
+    color: #fff;
+}
+
+/* Contenu principal */
+main {
+    padding: 2rem;
+}
+
+h2 {
+    color: #495057;
+    margin-bottom: 1.5rem;
+}
+
+.list-group-item {
+    margin-bottom: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.list-group-item .fw-bold {
+    color: #007bff;
+}
+
+.badge {
+    font-size: 0.9rem;
+}
+
+/* Footer */
+footer {
+    background-color: #343a40;
+    color: #fff;
+    text-align: center;
+    padding: 1rem 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
