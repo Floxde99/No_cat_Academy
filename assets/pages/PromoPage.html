@@ -42,76 +42,113 @@
         </nav>
     </header>
     <main>
+        
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal"
+            data-bs-whatever="@getbootstrap">Ajouter une Promo</button>
+        <!-- Nouvelle modale pour l'édition -->
+<div class="modal fade" id="editModal" tabindex="-1" aria-labelledby="editModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="editModalLabel">Modifier la Promo</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form id="editForm">
+                    <div class="mb-3">
+                        <label for="editName" class="form-label fw-bold">Nom de la Promo</label>
+                        <input type="text" class="form-control" id="editName" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="editStartDate" class="form-label fw-bold">Date de début</label>
+                        <input type="date" class="form-control" id="editStartDate" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="editEndDate" class="form-label fw-bold">Date de fin</label>
+                        <input type="date" class="form-control" id="editEndDate" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="editDescription" class="form-label fw-bold">Description</label>
+                        <textarea class="form-control" id="editDescription" rows="3" required></textarea>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fermer</button>
+                        <button type="submit" class="btn btn-primary">Sauvegarder</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="exampleModalLabel">Ajout de Promo</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <form id="promoForm" class="mb-3 d-flex align-items-start justify-content-between gap-3 ">
+                            <div class="mb-3 m-auto">
+                                <label for="name" class="form-label fw-bold">Nom de la Promo</label>
+                                <input type="text" class="form-control" id="name" placeholder="Entrez le nom de la promo">
+                            </div>
+                            <div class="mb-3 m-auto">
+                                <label for="startDate" class="form-label fw-bold">Date de début</label>
+                                <input type="date" class="form-control" id="startDate">
+                            </div>
+                            <div class="mb-3 m-auto ">
+                                <label for="endDate" class="form-label fw-bold">Date de fin</label>
+                                <input type="date" class="form-control" id="endDate">
+                            </div>
+                            <div class="mb-3 m-auto">
+                                <label for="formationDescription" class="form-label fw-bold">Description de la formation</label>
+                                <textarea class="form-control" id="formationDescription" rows="3"
+                                    placeholder="Entrez la description de la formation"></textarea>
+                            </div>
+                            <div class="modal-footer">
+                                <button class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                <button  class="btn btn-primary">Ajouter la Promo</button>
+                            </div>
+                        </form>
+                    </div>
+                  
+                </div>
+            </div>
+        </div>
+        
         <section class="gap-3">
             <h2 class="text-center gap-3">Liste Promos</h2>
-            <ol id="list" class="list-group list-group-numbered">
+            <ul id="list" class="list-group list-group-numbered">
                 <li class="list-group-item d-flex flex-column w-75">
                     <div class="d-flex justify-content-between align-items-start">
                         <div class="ms-2 me-auto">
                             <div class="fw-bold">Promo test</div>
-                            <p class="w-75">Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime explicabo neque cumque? Quidem esse, quia tempora sapiente tempore ut laudantium beatae similique! Similique quasi totam laborum, iste nesciunt voluptate eveniet.</p>
+                            <p class="w-75">Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime explicabo
+                                neque cumque? Quidem esse, quia tempora sapiente tempore ut laudantium beatae similique!
+                                Similique quasi totam laborum, iste nesciunt voluptate eveniet.</p>
                         </div>
                         <span id="nbstudent" class="badge bg-primary rounded-pill">nb élèves : 32</span>
                     </div>
                     <div class="d-flex justify-content-end mt-2">
                         <button class="btn btn-warning btn-sm me-1" title="Modifier">
                             <svg width="16" height="16" fill="currentColor" class="bi bi-pencil" viewBox="0 0 16 16">
-                                <path d="M12.146.146a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1 0 .708l-10 10a.5.5 0 0 1-.708-.708l3-3a.5.5 0 0 1 .708 0zm-6.6 1.1L1.1 5.5v7.1l2.2-2.2 6.7-6.7-2.2-2.2zM11.8 9.5l.6.6 1.4-1.4-6.7-6.7-.6.6 6.7 6.7z"/>
+                                <path
+                                    d="M12.146.146a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1 0 .708l-10 10a.5.5 0 0 1-.708-.708l3-3a.5.5 0 0 1 .708 0zm-6.6 1.1L1.1 5.5v7.1l2.2-2.2 6.7-6.7-2.2-2.2zM11.8 9.5l.6.6 1.4-1.4-6.7-6.7-.6.6 6.7 6.7z" />
                             </svg>
                         </button>
                         <button class="btn btn-danger btn-sm" title="Supprimer">
                             <svg width="16" height="16" fill="currentColor" class="bi bi-trash" viewBox="0 0 16 16">
-                                <path d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0V6z"/>
-                                <path fill-rule="evenodd" d="M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1v1zM4.118 4L4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4H4.118zM2.5 3V2h11v1h-11z"/>
+                                <path
+                                    d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0V6z" />
+                                <path fill-rule="evenodd"
+                                    d="M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1v1zM4.118 4L4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4H4.118zM2.5 3V2h11v1h-11z" />
                             </svg>
                         </button>
                     </div>
                 </li>
-                <li class="list-group-item d-flex flex-column w-75">
-                    <div class="d-flex justify-content-between align-items-start">
-                        <div class="ms-2 me-auto">
-                            <div class="fw-bold">Subheading</div>
-                            Content for list item
-                        </div>
-                        <span class="badge bg-primary rounded-pill">14</span>
-                    </div>
-                    <div class="d-flex justify-content-end mt-2">
-                        <button class="btn btn-warning btn-sm me-1" title="Modifier">
-                            <svg width="16" height="16" fill="currentColor" class="bi bi-pencil" viewBox="0 0 16 16">
-                                <path d="M12.146.146a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1 0 .708l-10 10a.5.5 0 0 1-.708-.708l3-3a.5.5 0 0 1 .708 0zm-6.6 1.1L1.1 5.5v7.1l2.2-2.2 6.7-6.7-2.2-2.2zM11.8 9.5l.6.6 1.4-1.4-6.7-6.7-.6.6 6.7 6.7z"/>
-                            </svg>
-                        </button>
-                        <button class="btn btn-danger btn-sm" title="Supprimer">
-                            <svg width="16" height="16" fill="currentColor" class="bi bi-trash" viewBox="0 0 16 16">
-                                <path d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0V6z"/>
-                                <path fill-rule="evenodd" d="M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1v1zM4.118 4L4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4H4.118zM2.5 3V2h11v1h-11z"/>
-                            </svg>
-                        </button>
-                    </div>
-                </li>
-                <li class="list-group-item d-flex flex-column w-75">
-                    <div class="d-flex justify-content-between align-items-start">
-                        <div class="ms-2 me-auto">
-                            <div class="fw-bold">Subheading</div>
-                            Content for list item
-                        </div>
-                        <span class="badge bg-primary rounded-pill">14</span>
-                    </div>
-                    <div class="d-flex justify-content-end mt-2">
-                        <button class="btn btn-warning btn-sm me-1" title="Modifier">
-                            <svg width="16" height="16" fill="currentColor" class="bi bi-pencil" viewBox="0 0 16 16">
-                                <path d="M12.146.146a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1 0 .708l-10 10a.5.5 0 0 1-.708-.708l3-3a.5.5 0 0 1 .708 0zm-6.6 1.1L1.1 5.5v7.1l2.2-2.2 6.7-6.7-2.2-2.2zM11.8 9.5l.6.6 1.4-1.4-6.7-6.7-.6.6 6.7 6.7z"/>
-                            </svg>
-                        </button>
-                        <button class="btn btn-danger btn-sm" title="Supprimer">
-                            <svg width="16" height="16" fill="currentColor" class="bi bi-trash" viewBox="0 0 16 16">
-                                <path d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0V6z"/>
-                                <path fill-rule="evenodd" d="M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1v1zM4.118 4L4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4H4.118zM2.5 3V2h11v1h-11z"/>
-                            </svg>
-                        </button>
-                    </div>
-                </li>
-            </ol>
+            </ul>
         </section>
     </main>
     <footer>
