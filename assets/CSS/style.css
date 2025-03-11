@@ -4,29 +4,45 @@
 }
 
 #logo {
-    width: 100px;
+    padding: 0;
+    width: 120px;
     height: auto;
 }
 
+.intro{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px;
+}
 .avatar {
     height: 200px;
     width: 200px;
-display: flex;
-justify-content: center;}
+}
 
 .card {
     display: flex;
     flex-direction: row;
     align-items: center;
-    margin: 20px;
 }
 
-.card-body{
-display: flex;
-flex-direction: column;
-align-items: center;
-    p{
-           text-align: center; 
+.card-body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    p {
+        text-align: center;
+    }
+}
+
+.card-body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    p {
+        text-align: center;
     }
 
 }
