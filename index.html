@@ -2,87 +2,98 @@
 <html lang="fr">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title></title>
-  <link rel="stylesheet" href="./assets/CSS/style.css">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title></title>
+   <link rel="stylesheet" href="./assets/CSS/style.css">
+   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 </head>
 
 <body>
-  <header>
-    <nav class="navbar navbar-expand-lg bg-light">
-      <div class="container-fluid">
-        <img id="logo" class="navbar-brand img-fluid" src="./assets/pictures/logo.png"></img>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll"
-          aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarScroll">
-          <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="./index.html">Accueil</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="./assets/pages/PromoPage.html">Liste Promo</a>
-            </li>
-            <li class="nav-item dropdown">
-            <li class="nav-item">
-              <a class="nav-link" href="./assets/pages/Contact.html">Contact</a>
-            </li>
-          </ul>
-          <form class="d-flex" role="search">
-            <input class="form-control me-2" type="search" placeholder="Nom de promo/miaou" aria-label="Search">
-            <button class="btn btn-outline-success" type="submit">Rechercher</button>
-          </form>
-        </div>
-      </div>
-    </nav>
-  </header>
-
-  <main>
-    <div class="intro">
-      <h2>Bienvenue à l'école No-Cat Academy</h2>
-      <p>Notre but ici, est de vous apprendre à résister à l'irresistible : les chats !</p>
-      <img class="avatar" src="./assets/pictures/cat-mignon.jpg" alt="Card image cap">
-    </div>
-    <div class="row">
-      <div class="col-sm-6">
-        <div class="card">
-          <div class="card-body">
-            <img class="avatar" src="./assets/pictures/Flo.png" alt="Card image cap">
-            <div>
-              <h5 class="card-title">Florian</h5>
-              <p class="card-text">Co-directeur de l'école No-Cat Academy</p>
-              <p>A choisi lui-même le nom de l'école à l'opposé de celui que la co-directrice avait choisi.</p>
+   <header>
+      <nav class="navbar navbar-expand-lg">
+         <div class="container-fluid">
+            <img id="logo" class="navbar-brand img-fluid" src="./assets/pictures/logo.png"></img>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll"
+               aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+               <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarScroll">
+               <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
+                  <li class="nav-item">
+                     <a class="nav-link active" aria-current="page" href="./index.html">Accueil</a>
+                  </li>
+                  <li class="nav-item">
+                     <a class="nav-link" href="./assets/pages/PromoPage.html">Liste Promo</a>
+                  </li>
+                  <li class="nav-item dropdown">
+                  <li class="nav-item">
+                     <a class="nav-link" href="./assets/pages/Contact.html">Contact</a>
+                  </li>
+               </ul>
+               <form class="d-flex" role="search">
+                  <input class="form-control me-2" type="search" placeholder="Nom de promo/miaou" aria-label="Search">
+                  <button class="btn btn-outline-success" type="submit">Rechercher</button>
+               </form>
             </div>
-          </div>
-        </div>
+         </div>
+      </nav>
+   </header>
+
+   <main>
+      <div class="intro ">
+         <h2>Bienvenue a l'école No-Cat Academy</h2>
+         <p>Notre but est de vous apprendre à résister à l'irresistible : les chats !</p>
+         <p>Différents cours vous seront proposés afin de construire votre imunité aux chats. Les professeurs se
+            tiennent à votre disposition à tout moment si vous n'êtes pas sûr de la manière de vous y prendre.
+         </p>
       </div>
-      <div class="col-sm-6">
-        <div class="card">
-          <div class="card-body">
-            <img class=" avatar" src="./assets/pictures/Suz.png" alt="Card image cap">
-            <div>
-              <h5 class="card-title">Suzon</h5>
-              <p class="card-text">Co-directrice de l'école No-Cat Academy</p>
-              <p>Fan de chat, elle en ajoute dans tous ses projets. Si vous en croisez sur le site, ils sont a elle.</p>
+
+      <div class="direction-container">
+         <div class="row">
+            <div class="col-sm-6">
+               <div class="card flo-container border-0" >
+                  <div class="card-body">
+                     <img class="avatar" src="./assets/pictures/Flo.png" alt="Card image cap">
+                     <div>
+                        <h4 class="card-title">Florian</h4>
+                        <p class="card-text">Co-directeur de l'école No-Cat Academy</p>
+                        <p>A choisi lui-même le nom de l'école, à l'opposé de celui que la co-directrice avait
+                           choisi. Veut juste faire un site normal.</p>
+                     </div>
+                  </div>
+               </div>
             </div>
-          </div>
-        </div>
+            <div class="col-sm-6">
+               <div class="card suz-container border-0">
+                  <div class="card-body">
+                     <img class=" avatar" src="./assets/pictures/Suz.png" alt="Card image cap">
+                     <div>
+                        <h4 class="card-title">Suzon</h4>
+                        <p class="card-text">Co-directrice de l'école No-Cat Academy</p>
+                        <p>Fan de chat, elle en ajoute dans tous ses projets. Si vous en croisez sur le site, ce
+                           sont les siens.
+                        </p>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
       </div>
-    </div>
-  </main>
+   </main>
 
-  <footer>
-
-  </footer>
-  <script src="./assets/js/promo.js"></script>
-  <script src="./assets/js/student.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-    crossorigin="anonymous"></script>
+   <footer>
+      <div>
+         <img src="./assets/pictures/patoune.png" alt="patoune" class="patoune">
+      </div>
+      <p>©Projet en coopération malgré les difficultés sur GitHub</p>
+   </footer>
+   <script src="./assets/js/promo.js"></script>
+   <script src="./assets/js/student.js"></script>
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"></script>
 </body>
 
 </html>
