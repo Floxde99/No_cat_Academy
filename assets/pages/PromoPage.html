@@ -13,7 +13,7 @@
 <body>
 
     <header>
-        <nav class="navbar navbar-expand-lg bg-light">
+        <nav class="navbar navbar-expand-lg">
             <div class="container-fluid">
                 <img id="logo" class="navbar-brand img-fluid" src="../pictures/logo.png"></img>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll"
@@ -35,14 +35,14 @@
                     <form class="d-flex" role="search">
                         <input class="form-control me-2" type="search" placeholder="Nom de promo/miaou"
                             aria-label="Search">
-                        <button class="btn btn-outline-success" type="submit">Rechercher</button>
+                        <button class="btn search-btn" type="submit">Rechercher</button>
                     </form>
                 </div>
             </div>
         </nav>
     </header>
     <main>
-        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+        <button type="button" class="btn add-btn" data-bs-toggle="modal" data-bs-target="#exampleModal">
             Ajouter une Promo
         </button>
 
@@ -69,7 +69,8 @@
                                 <input type="date" class="form-control" id="endDate" required>
                             </div>
                             <div class="mb-3">
-                                <label for="formationDescription" class="form-label fw-bold">Description de la formation</label>
+                                <label for="formationDescription" class="form-label fw-bold">Description de la
+                                    formation</label>
                                 <textarea class="form-control" id="formationDescription" rows="3" required></textarea>
                             </div>
                             <div class="modal-footer">
@@ -105,7 +106,8 @@
                                 <input type="date" class="form-control" id="editEndDate" required>
                             </div>
                             <div class="mb-3">
-                                <label for="editDescription" class="form-label fw-bold">Description de la formation</label>
+                                <label for="editDescription" class="form-label fw-bold">Description de la
+                                    formation</label>
                                 <textarea class="form-control" id="editDescription" rows="3" required></textarea>
                             </div>
                             <div class="modal-footer">
@@ -118,15 +120,18 @@
             </div>
         </div>
 
-        <section class="gap-3">
+        <section class="gap-3 intro">
             <h2 class="text-center gap-3">Liste Promos</h2>
             <ul id="list" class="list-group list-group-numbered">
-                
+
             </ul>
         </section>
     </main>
     <footer>
-
+        <div>
+            <img src="../pictures/patoune.png" alt="patoune" class="patoune">
+        </div>
+        <p>©Projet en coopération malgré les difficultés sur GitHub</p>
     </footer>
     <script src="../js/promo.js"></script>
     <script src="../js/student.js"></script>

@@ -38,6 +38,10 @@ header {
     font-size: 25px;
 }
 
+.nav-link:hover {
+    color: #d18547 !important;
+}
+
 .btn {
     color: #ffb67a !important;
     border-color: #ffb67a !important;
