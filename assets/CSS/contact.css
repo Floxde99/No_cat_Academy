@@ -1,0 +1,40 @@
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    width: 80%;
+    padding-top: 10px;
+}
+
+article {
+    background-color: rgb(0, 79, 112);
+    border: 2px solid #00000057;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px;
+    margin-top: 40px;
+    width: 40%;
+
+    p {
+        text-align: center;
+        font-size: 20px;
+        color: #ffb67a;
+    }
+}
+
+.form{
+margin-bottom: 40px;
+}
+
+.send-btn {
+    font-weight: bolder !important;
+border: 2px solid !important;
+}
+
+
+
+/* .input-error {
+    border: 2px solid rgb(177, 94, 0) !important;
+    background-color: rgb(238, 221, 208);
+} */
