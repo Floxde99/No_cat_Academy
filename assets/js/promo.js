@@ -64,7 +64,7 @@ function ajouterPromo(titre, description, nbEleves, id) {
         <div class="d-flex justify-content-between align-items-start">
             <div class="ms-2 me-auto">
                 <div class="fw-bold">${titre}</div>
-                <p class="w-75">${description}</p>
+                <p class="descript">${description}</p>
             </div>
             <span class="badge rounded-pill">nb élèves : ${nbEleves}</span>
         </div>
