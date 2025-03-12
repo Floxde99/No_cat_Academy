@@ -57,33 +57,36 @@ addForm.addEventListener("submit", async (e) => {
 });
 
 function ajouterPromo(titre, description, nbEleves, id) {
-  const newLi = document.createElement("li");
-  newLi.className = "list-group-item d-flex flex-column w-75";
-  newLi.id = `promo-${id}`;
-  newLi.innerHTML = `
-        <div class="d-flex justify-content-between align-items-start">
-            <div class="ms-2 me-auto">
-                <div class="fw-bold">${titre}</div>
-                <p class="w-75">${description}</p>
-            </div>
-            <span class="badge bg-primary rounded-pill">nb élèves : ${nbEleves}</span>
-        </div>
-        <div class="d-flex justify-content-end mt-2">
-            <button class="btn btn-warning btn-sm me-1" onclick="modifierPromo('${id}')" title="Modifier">
-                <svg width="16" height="16" fill="currentColor" class="bi bi-pencil" viewBox="0 0 16 16">
-                    <path d="M12.146.146a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1 0 .708l-10 10a.5.5 0 0 1-.708-.708l3-3a.5.5 0 0 1 .708 0zm-6.6 1.1L1.1 5.5v7.1l2.2-2.2 6.7-6.7-2.2-2.2zM11.8 9.5l.6.6 1.4-1.4-6.7-6.7-.6.6 6.7 6.7z"/>
-                </svg>
-            </button>
-            <button class="btn btn-danger btn-sm" onclick="supprimerPromo('${id}')" title="Supprimer">
-                <svg width="16" height="16" fill="currentColor" class="bi bi-trash" viewBox="0 0 16 16">
-                    <path d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0V6z"/>
-                    <path fill-rule="evenodd" d="M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1v1zM4.118 4L4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4H4.118zM2.5 3V2h11v1h-11z"/>
-                </svg>
-            </button>
-        </div>
-    `;
+    const newLi = document.createElement("li");
+    newLi.className = "list-group-item d-flex flex-column w-75";
+    newLi.id = `promo-${id}`;
 
-  document.getElementById("list").appendChild(newLi);
+
+    newLi.innerHTML = `
+    <div class="d-flex justify-content-between align-items-start">
+        <div class="ms-2 me-auto titre">
+            <a href="./studentpage.html?promo=${id}" class="fw-bold">${titre}</a>
+            <p class="w-75">${description}</p>
+        </div>
+        <span class="badge bg-primary rounded-pill">nb élèves : ${nbEleves}</span>
+    </div>
+    <div class="d-flex justify-content-end mt-2">
+        <button class="btn btn-warning btn-sm me-1" onclick="modifierPromo('${id}')" title="Modifier">
+            <svg width="16" height="16" fill="currentColor" class="bi bi-pencil" viewBox="0 0 16 16">
+                <path d="M12.146.146a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1 0 .708l-10 10a.5.5 0 0 1-.708-.708l3-3a.5.5 0 0 1 .708 0zm-6.6 1.1L1.1 5.5v7.1l2.2-2.2 6.7-6.7-2.2-2.2zM11.8 9.5l.6.6 1.4-1.4-6.7-6.7-.6.6 6.7 6.7z"/>
+            </svg>
+        </button>
+        <button class="btn btn-danger btn-sm" onclick="supprimerPromo('${id}')" title="Supprimer">
+            <svg width="16" height="16" fill="currentColor" class="bi bi-trash" viewBox="0 0 16 16">
+                <path d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0V6z"/>
+                <path fill-rule="evenodd" d="M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1v1zM4.118 4L4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4H4.118zM2.5 3V2h11v1h-11z"/>
+            </svg>
+        </button>
+    </div>
+`;
+
+
+    document.getElementById("list").appendChild(newLi);
 }
 
 async function modifierPromo(id) {
