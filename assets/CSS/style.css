@@ -3,51 +3,162 @@
     src: url(../font/catcafe.ttf);
 }
 
+html,
+body {
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 90vh;
+    cursor: url('../pictures/cursor.cur'), auto;
+}
+
+header {
+    background-color: rgb(0, 79, 112);
+}
+
+.navbar {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.navbar .nav-link {
+    color: #ffb67a !important;
+    font-size: 25px;
+}
+
+.btn {
+    color: #ffb67a !important;
+    border-color: #ffb67a !important;
+}
+
+.btn:hover{
+    background-color: #ffb67a !important;
+    color: #004f70 !important;
+    border-color: #ffb67a !important;
+}
+
+main {
+    background-image: url(../pictures/background-3.jpg);
+    box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, .2);
+    background-size: 550px;
+    background-repeat: repeat;
+    flex: 1;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
 #logo {
     padding: 0;
     width: 120px;
     height: auto;
 }
 
-.intro{
+.intro {
+    font-size: larger;
+    background-color: white;
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 20px;
+    justify-content: center;
+    text-align: center;
+    padding: 20px;
+    width: 100vw;
+    background-color: #e7e7e7;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.062);
+
+    h2 {
+        font-family: "catcafe";
+        font-size: 40px;
+    }
+
+    p {
+        margin: 5px;
+    }
 }
+
 .avatar {
     height: 200px;
     width: 200px;
+    margin: 5px;
+    border: 3px solid black;
+    border-radius: 100px;
+    background-color: #e7e7e7;
+}
+
+.direction-container {
+    margin: auto;
+}
+
+
+.col-sm-6 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.flo-container {
+    margin-left: 200px;
+}
+
+.suz-container {
+    margin-right: 200px;
 }
 
 .card {
     display: flex;
     flex-direction: row;
     align-items: center;
+    justify-content: center;
+    width: 70%;
+    margin-bottom: 40px;
 }
 
 .card-body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    height: auto;
+    background-color: rgb(0, 79, 112);
+    border: 2px solid #00000057;
+
 
     p {
         text-align: center;
+        font-size: 20px;
+        color: #ffb67a;
     }
-}
-
-.card-body {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-
-    p {
-        text-align: center;
-    }
-
 }
 
 .card-title {
     text-align: center;
     font-family: "catcafe";
+    color: #ffb67a !important;
+
+}
+
+footer {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    margin-top: auto;
+    background-color: rgb(0, 79, 112);
+    box-shadow:  0px 0px 6px 4px rgba(0, 0, 0, 0.1);
+
+
+    .patoune {
+        width: 70px;
+        padding: 10px;
+    }
+
+
+    p {
+        margin: 0;
+        color: #ffb67a !important;
+
+    }
 }
