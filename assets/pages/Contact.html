@@ -44,7 +44,7 @@
     </header>
     <main>
         <div class="intro">
-            <h2>Vous avez des questions ?</h2>
+            <h2>Contactez-nous</h2>
         </div>
         <article>
             <img class=" avatar" src="../pictures/cat-mignon.png" alt="Card image cap">
@@ -55,10 +55,10 @@
         <article class="form">
             <h3 class="card-title">Contactez-nous</h3>
             <form class="contact-form">
-                <input type="text" name="name" required id="name" placeholder="Nom">
-                <input type="email" name="email" required class="email" placeholder="Email">
-                <textarea name="message" id="message" required placeholder="Message" rows="5"></textarea>
-                <button type="button" class="btn send-btn" id="submit-btn">Envoyer</button>
+                <input class="norm" type="text" name="name" required id="name" placeholder="Nom">
+                <input class="norm" type="email" name="email" required id="email" placeholder="Email">
+                <textarea class="norm" name="message" id="message" required placeholder="Message" rows="5"></textarea>
+                <button type="button" class="btn send-btn" id="submit-btn" onclick="appel()">Envoyer</button>
             </form>
             <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
                 aria-hidden="true">

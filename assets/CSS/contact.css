@@ -23,18 +23,20 @@ article {
     }
 }
 
-.form{
-margin-bottom: 40px;
+.form {
+    margin-bottom: 40px;
 }
 
 .send-btn {
     font-weight: bolder !important;
-border: 2px solid !important;
+    border: 2px solid !important;
 }
 
-
-
-/* .input-error {
+.erreur {
     border: 2px solid rgb(177, 94, 0) !important;
     background-color: rgb(238, 221, 208);
-} */
+}
+
+.norm {
+border: 2px solid rgb(83, 83, 83);
+}
